@@ -2,19 +2,9 @@ import configparser
 
 from flask import Flask, request, abort
 
-# from linebot import LineBotApi, WebhookHandler
-# from linebot.exceptions import InvalidSignatureError
-# from linebot.models import MessageEvent, TextMessage, TextSendMessage
-
-from linebot import (
-    LineBotApi, WebhookHandler
-)
-from linebot.exceptions import (
-    InvalidSignatureError
-)
-from linebot.models import (
-    MessageEvent, TextMessage, TextSendMessage,
-)
+from linebot import LineBotApi, WebhookHandler
+from linebot.exceptions import InvalidSignatureError
+from linebot.models import MessageEvent, TextMessage, TextSendMessage
 
 # Load data from config.ini file
 config = configparser.ConfigParser()
@@ -54,5 +44,4 @@ def handle_message(event):
 
 # Running server
 if __name__ == "__main__":
-    #app.run(debug=True)
     app.run()
