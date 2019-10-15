@@ -38,7 +38,7 @@ def callback():
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(event.reply_token, TextSendMessage(text=event.message.text))
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text='HelloWorld'))
     # Olami nlp
     #line_bot_api.reply_message(event.reply_token, TextSendMessage(text=Olami().nli(event.message.text,event.source.user_id)))
 
