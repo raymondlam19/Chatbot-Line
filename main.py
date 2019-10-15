@@ -14,8 +14,8 @@ config.read('config.ini')
 app = Flask(__name__)
 
 # Initial bot by line access token & secret
-line_bot_api = LineBotApi(config['line_bot']['Channel_Access_Token'])
-handler = WebhookHandler(config['line_bot']['Channel_Secret'])
+# line_bot_api = LineBotApi(config['line_bot']['Channel_Access_Token'])
+# handler = WebhookHandler(config['line_bot']['Channel_Secret'])
 
 line_bot_api = LineBotApi(str(config['line_bot']['Channel_Access_Token']))
 handler = WebhookHandler(str(config['line_bot']['Channel_Secret']))
